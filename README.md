@@ -101,7 +101,7 @@ Since this library is **not published on Maven or Gradle repositories**, follow 
 
 ### 1. Download AAR
 
-👉 [**Click here to download JUpdater.aar**](https://github.com/vijayjvvc/jupdater/raw/refs/heads/main/v1.0.0/jupdater-V1.0.0-release.aar)
+👉 [**Click here to download JUpdater.aar**](https://github.com/vijayjvvc/jupdater_sdk_code/raw/refs/heads/main/jupdater-sdk-aar/jupdater-V2.1.1-release.aar)
 
 ### 2. Create `libs` folder
 
