@@ -1,3 +1,11 @@
+
+/*
+ * Copyright (c) 2026 JUpdater
+ *
+ * Licensed under the MIT License.
+ *
+ */
+
 package com.qtlws.android.jupdater;
 
 import androidx.annotation.NonNull;
@@ -52,7 +60,8 @@ public class JUpdaterConfig {
         }
         this.apiKey = apiKey;
         this.updatedApkUrl = "backend";
-        this.customServerUrl = "https://kiqzkltcfhdjvcttzuxy.supabase.co/functions/v1/check-update";
+//        this.customServerUrl = "https://kiqzkltcfhdjvcttzuxy.supabase.co/functions/v1/check-update";
+        this.customServerUrl = "https://jupdater-main-web.onrender.com/api/check-update";
         enableForceUpdate(forceUpdateThreshold);
     }
 
@@ -73,7 +82,7 @@ public class JUpdaterConfig {
         return isDebug;
     }
 
-    public void enableForceUpdate(int threshold) {
+    protected void enableForceUpdate(int threshold) {
         if (threshold<=0) {
             throw new IllegalArgumentException("Threshold cannot be less then 1");
         }
@@ -85,12 +94,12 @@ public class JUpdaterConfig {
         return forceUpdateEnabled;
     }
 
-    public int getForceUpdateThreshold() {
+    protected int getForceUpdateThreshold() {
         return forceUpdateThreshold;
     }
 
 
-    public String getUpdatedApkUrl() {
+    protected String getUpdatedApkUrl() {
         return updatedApkUrl;
     }
 }

@@ -1,7 +1,14 @@
+
+/*
+ * Copyright (c) 2026 JUpdater
+ *
+ * Licensed under the MIT License.
+ *
+ */
+
 package com.qtlws.android.jupdater;
 
 import android.app.Activity;
-import android.content.Context;
 
 class JUpdateSheetController {
 

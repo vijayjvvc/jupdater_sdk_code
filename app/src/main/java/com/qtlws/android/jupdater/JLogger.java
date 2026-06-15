@@ -1,3 +1,11 @@
+
+/*
+ * Copyright (c) 2026 JUpdater
+ *
+ * Licensed under the MIT License.
+ *
+ */
+
 package com.qtlws.android.jupdater;
 
 import static com.qtlws.android.jupdater.JUpdaterCore.SDKNAME;
@@ -5,11 +13,11 @@ import static com.qtlws.android.jupdater.JUpdaterCore.VERSION;
 
 import android.util.Log;
 
-public class JLogger {
+class JLogger {
 
     private static String TAG = SDKNAME + "_V" + VERSION;
 
-    public static boolean var36dgx = false;
+    protected static boolean var36dgx = false;
 
     public static void errorLog(Object s) {
         Log.e(TAG, s.toString());

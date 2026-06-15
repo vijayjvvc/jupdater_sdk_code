@@ -1,3 +1,11 @@
+
+/*
+ * Copyright (c) 2026 JUpdater
+ *
+ * Licensed under the MIT License.
+ *
+ */
+
 package com.qtlws.android.jupdater;
 
 import org.json.JSONException;
@@ -12,8 +20,8 @@ public class Constants {
 
     public static final String var34sp = "j_updater_pref";
     public static final String var35sp = "j_updater_version";
-//    public static String DATA = "data";
-//    protected static final String UPDATEVERSIONURL = "https://bk-jupdater.onrender.com/update_status.json";
+    public static final String INSTALLATION_ID = "installation_id";
+    public static String DATA = "data";
 
     public static String mapToString(Map<String, Object> map) {
         String r0 = new JSONObject(map).toString();

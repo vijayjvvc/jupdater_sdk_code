@@ -1,11 +1,31 @@
+/*
+ * Copyright (c) 2026 JUpdater
+ *
+ * Licensed under the MIT License.
+ *
+ */
+
 import java.util.Locale
+import java.util.Properties
 
 plugins {
     id("com.android.library")
 }
 
-var versionName = "1.1.1"
-var versionCode = 4
+// 1. Create an empty properties object
+val localProperties = Properties()
+val localPropertiesFile = rootProject.file("local.properties")
+
+// 2. Load the file if it exists
+if (localPropertiesFile.exists()) {
+    localPropertiesFile.inputStream().use { stream ->
+        localProperties.load(stream)
+    }
+}
+
+var sdkName  = localProperties.getProperty("SDK_NAME") ?: "\"JUpdater\""
+var version = localProperties.getProperty("VERSION") ?: "\"1.0.0\""
+val buildNumber = localProperties.getProperty("BUILDNUMBER") ?: "1"
 
 android {
     namespace = "com.qtlws.android.jupdater"
@@ -18,9 +38,9 @@ android {
         consumerProguardFiles("proguard-rules.pro")
 
         // Pass version info to BuildConfig
-        buildConfigField("String", "SDK_NAME", "\"JUpdater\"")
-        buildConfigField("String", "VERSION", "\"${versionName}\"")
-        buildConfigField("String", "BUILDNUMBER", "\"${versionCode}\"")
+        buildConfigField("String", "SDK_NAME", "\"${sdkName}\"")
+        buildConfigField("String", "VERSION", "\"${version}\"")
+        buildConfigField("String", "BUILDNUMBER", "\"${buildNumber}\"")
     }
 
     buildTypes {
@@ -55,7 +75,7 @@ android {
                 ) else it.toString()
             }
 //            val buildType = output.b.name.capitalize()
-            output.outputFileName = "jupdater-V${versionName}-${variantName.toLowerCase()}.aar"
+            output.outputFileName = "jupdater-V${version}-${variantName.toLowerCase()}.aar"
         }
     }
 

@@ -1,3 +1,10 @@
+/*
+ * Copyright (c) 2026 JUpdater
+ *
+ * Licensed under the MIT License.
+ *
+ */
+
 pluginManagement {
     repositories {
         google {
@@ -21,4 +28,5 @@ dependencyResolutionManagement {
 
 rootProject.name = "jupdater"
 include(":app")
- 
+include(":sample-java")
+include(":sample-kotlin")

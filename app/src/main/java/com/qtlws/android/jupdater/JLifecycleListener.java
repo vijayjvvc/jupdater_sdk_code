@@ -1,3 +1,11 @@
+
+/*
+ * Copyright (c) 2026 JUpdater
+ *
+ * Licensed under the MIT License.
+ *
+ */
+
 package com.qtlws.android.jupdater;
 
 import android.app.Activity;
@@ -15,7 +23,7 @@ import java.util.TimerTask;
 import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
 
-public class JLifecycleListener {
+class JLifecycleListener {
 
     @VisibleForTesting
     public static long CHECK_DELAY = 500L;
@@ -35,7 +43,7 @@ public class JLifecycleListener {
         void onAppBackground(Context var1);
     }
 
-    static void $$b(Context var0, final ForegroundListener var1) {
+    protected static void $$b(Context var0, final ForegroundListener var1) {
         listener = var1;
 
         Application.ActivityLifecycleCallbacks var2 = new Application.ActivityLifecycleCallbacks() {
