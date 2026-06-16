@@ -25,10 +25,10 @@ public class App extends Application {
         jUpdater.init(this,configForManagedServer);
 
         // For Custom Server, get the backend live which support get request from the sdk to response with proper json data
-        JUpdaterConfig configForUserServer = JUpdaterConfig.useCustomServer("fallback_updated_app_url","enter_your_server_url");
+        // JUpdaterConfig configForUserServer = JUpdaterConfig.useCustomServer("fallback_updated_app_url","enter_your_server_url");
         //For production mode set it false  or just remove the line
-        configForUserServer.setDebug(true);
-        jUpdater.init(this,configForUserServer);
+        // configForUserServer.setDebug(true);
+        // jUpdater.init(this,configForUserServer);
     }
 
 }
