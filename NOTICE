@@ -12,10 +12,15 @@ Project:
 JUpdater
 
 Repository:
-https://github.com/vijayjvvc/jupdater
+https://github.com/vijayjvvc/jupdater_sdk_code
 
 Maintainer:
-QTLWS (Quanta Tech Link World Sync)
+Vijay, LCWD, VENTURES HUB,QTLWS (Quanta Tech Link World Sync)
+
+Infrastructure & Managed Platform Credits:
+Managed cloud update services and backend infrastructure for JUpdater are
+provided by Ventures Hub (an independent software company by QTLWS).
+Ventures Hub provides 3 free app configurations per developer on their platform.
 
 Trademark Notice:
 "JUpdater" and associated branding, logos, and visual identity are property of

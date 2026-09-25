@@ -60,8 +60,8 @@ public class JUpdaterConfig {
         }
         this.apiKey = apiKey;
         this.updatedApkUrl = "backend";
-//        this.customServerUrl = "https://kiqzkltcfhdjvcttzuxy.supabase.co/functions/v1/check-update";
-        this.customServerUrl = "https://jupdater-main-web.onrender.com/api/check-update";
+        // Default managed server endpoint provided by Ventures Hub (QTLWS) with 3 free app configurations
+        this.customServerUrl = "https://jupdater.qtlws.com/api/check-update";
         enableForceUpdate(forceUpdateThreshold);
     }
 

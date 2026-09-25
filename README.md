@@ -101,7 +101,7 @@ Since this library is **not published on Maven or Gradle repositories**, follow 
 
 ### 1. Download AAR
 
-👉 [**Click here to download JUpdater.aar**](https://github.com/vijayjvvc/jupdater_sdk_code/raw/refs/heads/main/jupdater-sdk-aar/jupdater-V2.1.1-release.aar)
+👉 [**Click here to download JUpdater.aar**](https://github.com/vijayjvvc/jupdater_sdk_code/raw/refs/heads/main/jupdater-sdk-aar/jupdater-V2.1.2-release.aar)
 
 ### 2. Create `libs` folder
 
@@ -364,6 +364,7 @@ JUpdater.getInstance().launchUrlInBrowser(requireContext(), "https://your-websit
 
 | Version                                                                                                                   | Description                                                                                                                                                                                                                                                                                       |
 |:--------------------------------------------------------------------------------------------------------------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [v2.1.2](https://github.com/vijayjvvc/jupdater_sdk_code/raw/refs/heads/main/jupdater-sdk-aar/jupdater-V2.1.2-release.aar) | **Features & Fixes:**<br>• Updated real URL for Managed Servers (`https://jupdater.qtlws.com/api/check-update`).<br>• Infrastructure powered by **Ventures Hub** (by QTLWS) with 3 free app configurations per developer.<br>• Minor bug fixes and performance improvements. |
 | [v2.1.1](https://github.com/vijayjvvc/jupdater_sdk_code/raw/refs/heads/main/jupdater-sdk-aar/jupdater-V2.1.1-release.aar) | **Features & Fixes:**<br>• Added support for Managed Servers and User-Hosted (Self-Hosted) servers.<br>• Added validation: `FallbackUrl` and Custom Server URL are required for self-hosted backends; API Key is required for Managed Servers.<br>• Minor bug fixes and performance improvements. |
 | [v1.0.2](https://github.com/vijayjvvc/jupdater/raw/refs/heads/main/v1.0.2/jupdater-V1.0.2-release.aar)                    | **Features & Fixes:**<br>• Added open-link helper utility.<br>• Minor bug fixes.                                                                                                                                                                                                                  |
 | [v1.0.1](https://github.com/vijayjvvc/jupdater/raw/refs/heads/main/v1.0.1/jupdater-V1.0.1-release.aar)                    | **Features & Fixes:**<br>• Server URL configuration is now mandatory (supports both custom APIs and Managed Cloud).<br>• Added validation to reject threshold values less than 1.<br>• Minor bug fixes.                                                                                           |
@@ -400,6 +401,15 @@ With `JUpdater`:
 
 > 🛠️ JUpdater is built by devs for devs — especially those who want full control of their distribution and update strategy. No gatekeepers, no vendor lock-in, no data collection.
 
+---
+
+## 🏢 Infrastructure Powered by Ventures Hub
+
+The managed backend server and infrastructure for `JUpdater` is created and provided by **Ventures Hub** — an independent software company by QTLWS that builds software products and services.
+
+Ventures Hub maintains the default managed server endpoint (`https://jupdater.qtlws.com/api/check-update`) so that developers can use the SDK efficiently out-of-the-box. Developers can configure **up to 3 free apps** on their platform to easily utilize the managed update services.
+
+---
 
 ## 🌐 Official Documentation & Contact
 
@@ -424,7 +434,7 @@ We welcome suggestions! If you:
 
 ## 📄 License
 
-MIT License © 2026 QTLWS
+MIT License © 2026
 
 ---
 
