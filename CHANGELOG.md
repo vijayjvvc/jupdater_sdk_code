@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. The format is based on [Keep a Changelog](https://keepachangelog.com).
 
+## - 2026-09-25
+
+### Added
+- Updated architecture support for both Managed Cloud and Self-Hosted server environments.
+- Added real endpoint URL for Managed Server (`https://jupdater.qtlws.com/api/check-update`).
+- Integrated Ventures Hub platform credits and services (an independent software company by QTLWS providing managed infrastructure and up to 3 free app configurations for developers).
+
+
 ## - 2026-06-15
 
 ### Added
