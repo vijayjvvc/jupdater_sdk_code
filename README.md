@@ -92,15 +92,63 @@ You are responsible for mentioning this in your app's privacy policy and for obt
 ---
 
 
-## 📥 Download & Setup (Manual)
+## 📥 Download & Setup
 
-Since this library is **not published on Maven or Gradle repositories**, follow these steps to manually integrate the `.aar`:
+### 📦 Option 1: JitPack Maven (Recommended)
 
-### 1. Download AAR
+#### 1. Add JitPack repository (`settings.gradle` or `settings.gradle.kts`)
 
-👉 [**Click here to download JUpdater.aar**](https://github.com/vijayjvvc/jupdater_sdk_code/raw/refs/heads/main/jupdater-sdk-aar/jupdater-V2.1.2-release.aar)
+##### Groovy DSL (`settings.gradle`):
+```groovy
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        maven { url 'https://jitpack.io' }
+    }
+}
+```
 
-### 2. Create `libs` folder
+##### Kotlin DSL (`settings.gradle.kts`):
+```kotlin
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        maven { url = uri("https://jitpack.io") }
+    }
+}
+```
+
+#### 2. Add dependency (`build.gradle` or `build.gradle.kts`)
+
+##### Groovy DSL (`build.gradle`):
+```groovy
+dependencies {
+    implementation 'com.github.vijayjvvc:jupdater_sdk_code:2.3.1'
+}
+```
+
+##### Kotlin DSL (`build.gradle.kts`):
+```kotlin
+dependencies {
+    implementation("com.github.vijayjvvc:jupdater_sdk_code:2.3.1")
+}
+```
+
+---
+
+### 📦 Option 2: Manual AAR Integration
+
+If you prefer to include the `.aar` manually:
+
+#### 1. Download AAR
+
+👉 [**Click here to download JUpdater.aar**](https://github.com/vijayjvvc/jupdater_sdk_code/raw/refs/heads/main/jupdater-sdk-aar/jupdater-V2.3.1-release.aar)
+
+#### 2. Create `libs` folder
 
 Place the downloaded `.aar` file inside your app module:
 
@@ -111,10 +159,9 @@ YourProject/
         └── jupdater-vXX.XX.XX.aar
 ```
 
+#### 3. Add repositories (`settings.gradle` or `settings.gradle.kts`)
 
-### 3. Add repositories (Top-level `settings.gradle` or `settings.gradle.kts`)
-
-#### Groovy DSL:
+##### Groovy DSL:
 ```groovy
 dependencyResolutionManagement {
     repositories {
@@ -127,7 +174,7 @@ dependencyResolutionManagement {
 }
 ```
 
-#### Kotlin DSL:
+##### Kotlin DSL:
 ```kotlin
 dependencyResolutionManagement {
     repositories {
@@ -140,19 +187,19 @@ dependencyResolutionManagement {
 }
 ```
 
-### 4. Add dependency (App-level `build.gradle` or `build.gradle.kts`)
+#### 4. Add dependency (`build.gradle` or `build.gradle.kts`)
 
-#### Groovy:
+##### Groovy:
 ```groovy
 dependencies {
-      implementation files('libs/jupdater-v1.0.1.aar')
+    implementation files('libs/jupdater-v2.1.2.aar')
 }
 ```
 
-#### Kotlin:
+##### Kotlin:
 ```kotlin
 dependencies {
-    implementation(files("libs/jupdater-v1.0.1.aar"))
+    implementation(files("libs/jupdater-v2.1.2.aar"))
 }
 ```
 > 📁 If you have multiple `.aar` or `.jar` files, use the `fileTree` method instead:
@@ -361,6 +408,7 @@ JUpdater.getInstance().launchUrlInBrowser(requireContext(), "https://your-websit
 
 | Version                                                                                                                   | Description                                                                                                                                                                                                                                                                                       |
 |:--------------------------------------------------------------------------------------------------------------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| v2.3.1 | **Features & Fixes:**<br>• Added official Maven repository support via **JitPack** (`com.github.vijayjvvc:jupdater_sdk_code:2.3.1`).<br>• Completely removed Android ID collection.<br>• New configurable logging system (`JLogLevel`).<br>• Threading, performance, and offline caching optimizations. |
 | [v2.1.2](https://github.com/vijayjvvc/jupdater_sdk_code/raw/refs/heads/main/jupdater-sdk-aar/jupdater-V2.1.2-release.aar) | **Features & Fixes:**<br>• Updated real URL for Managed Servers (`https://jupdater.qtlws.com/api/check-update`).<br>• Infrastructure powered by **Ventures Hub** (by QTLWS) with 3 free app configurations per developer.<br>• Minor bug fixes and performance improvements. |
 | [v2.1.1](https://github.com/vijayjvvc/jupdater_sdk_code/raw/refs/heads/main/jupdater-sdk-aar/jupdater-V2.1.1-release.aar) | **Features & Fixes:**<br>• Added support for Managed Servers and User-Hosted (Self-Hosted) servers.<br>• Added validation: `FallbackUrl` and Custom Server URL are required for self-hosted backends; API Key is required for Managed Servers.<br>• Minor bug fixes and performance improvements. |
 | [v1.0.2](https://github.com/vijayjvvc/jupdater/raw/refs/heads/main/v1.0.2/jupdater-V1.0.2-release.aar)                    | **Features & Fixes:**<br>• Added open-link helper utility.<br>• Minor bug fixes.                                                                                                                                                                                                                  |

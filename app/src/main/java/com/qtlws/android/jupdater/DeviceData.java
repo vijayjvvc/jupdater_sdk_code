@@ -45,7 +45,6 @@ final class DeviceData {
         o.put("package_name", app.packageName);
         o.put("app_version_code", Integer.toString(app.versionCode));
         o.put("app_version_name", app.versionName);
-        o.put("android_id", app.androidId);
         o.put("sdk", app.sdk);
         o.put("firstInstallTime", app.firstInstallTimeFormatted());
         return o;

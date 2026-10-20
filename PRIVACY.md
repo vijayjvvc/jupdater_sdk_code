@@ -2,6 +2,8 @@
 
 > This document describes what the SDK does. It is not legal advice.
 
+> 🔒 **Privacy Note (v2.3.1+):** Android ID collection has been **completely removed**. The SDK does not read or collect Android ID, hardware serial numbers, advertising IDs, IMEI, or MAC addresses.
+
 ## What is sent, and when
 
 | Mode | Request | Data sent |
