@@ -220,15 +220,14 @@ class JUpdaterCore extends JUpdater {
         }
 
         String url = s.updateUrl != null ? s.updateUrl : cfg.getFallbackApkUrl();
-//        if (!UrlLauncher.isHttpUrl(url)) {
-//            JLogger.w("No valid http(s) update URL available, not showing update UI");
-//            return;
-//        }
+        if (!UrlLauncher.isHttpUrl(url)) {
+            JLogger.w("No valid http(s) update URL available, not showing update UI");
+            return;
+        }
 
         int threshold = s.forceGap >= 1 ? s.forceGap : cfg.getForceUpdateThreshold();
         boolean force =  s.isForceUpdate|| (s.versionCode - app.versionCode > threshold);
         JLogger.i("Update available -> " + (force ? "FORCE" : "optional"));
-        assert url != null;
         showUpdateUi(url, force,s.title,s.message);
     }
 
